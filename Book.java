@@ -30,19 +30,24 @@ public class Book {
 
   }
 
-  // Ask user for new Book
+  // Ask user for new Book Title
   public String getBook() {
-    Scanner scBook = new Scanner(System.in);
-    System.out.println("Book Title: ");
-    String bookTitle = scBook.nextLine();
-    return bookTitle;
+    try (Scanner scBook = new Scanner(System.in)) {
+      System.out.println("Book Title: ");
+      String bookTitle = scBook.nextLine();
+      scBook.close();
+      return bookTitle;
+    }
   }
 
+  // Ask user for new Book Author
   public String getAuth() {
     System.out.println("Author: ");
-    Scanner scAuth = new Scanner(System.in);
-    String bookAuth = scAuth.nextLine();
-    return bookAuth;
+    try (Scanner scAuth = new Scanner(System.in)) {
+      String bookAuth = scAuth.nextLine();
+      scAuth.close();
+      return bookAuth;
+    }
   }
 
   // print list of Books + Authors
