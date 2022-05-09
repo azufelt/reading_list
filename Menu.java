@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Menu {
   public String options() {
+
     System.out.println("Main Menu ");
     System.out.println("Type + to add a new book");
     System.out.println("Type V to view list of books");

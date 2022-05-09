@@ -20,9 +20,12 @@ public class Main {
 
     String menuCommand = menuList.options();
     // bookList.runCommand(menuCommand);
-    // System.out.println(menuCommand);
+    System.out.println(menuCommand); // **Prints the command the user entered. */
 
     if (menuCommand == "+") {
+      // check:
+      System.out.println("In the IF statement!");
+
       // Ask User for book/author
       String title = bookList.getBook();
       String author = bookList.getAuth();
