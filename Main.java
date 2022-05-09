@@ -20,8 +20,6 @@ public class Main {
 
     String menuCommand = menuList.options();
 
-    System.out.println(menuCommand); // **Prints the command the user entered. */
-
     bookList.runCommand(menuCommand);
 
     // if (menuCommand == "+") {

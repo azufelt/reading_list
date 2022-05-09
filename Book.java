@@ -126,7 +126,8 @@ public class Book {
   }
 
   public void runCommand(String menuCommand) {
-    if (menuCommand == "+") {
+
+    if (menuCommand.equals("+")) {
       // check:
       System.out.println("In the IF statement!");
 
@@ -135,11 +136,11 @@ public class Book {
       String author = getAuth();
       // add to hashList
       set(title, author);
-    } else if (menuCommand == "V") {
+    } else if (menuCommand.equals("V")) {
       printList();
-    } else if (menuCommand == "T") {
+    } else if (menuCommand.equals("T")) {
       System.out.println(keys());
-    } else if (menuCommand == "A") {
+    } else if (menuCommand.equals("A")) {
       System.out.println(values());
     }
   }
