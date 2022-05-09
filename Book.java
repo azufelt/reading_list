@@ -32,8 +32,8 @@ public class Book {
 
   // Ask user for new Book
   public String getBook() {
-    System.out.println("Book Title: ");
     Scanner scBook = new Scanner(System.in);
+    System.out.println("Book Title: ");
     String bookTitle = scBook.nextLine();
     return bookTitle;
   }
@@ -125,23 +125,23 @@ public class Book {
     return allValues;
   }
 
-  public void runCommand(String menuCommand) {
+  // public void runCommand(String menuCommand) {
 
-    if (menuCommand.equals("+")) {
-      // check:
-      System.out.println("In the IF statement!");
+  // if (menuCommand.equals("+")) {
+  // // check:
+  // System.out.println("In the IF statement!");
 
-      // Ask User for book/author
-      String title = getBook();
-      String author = getAuth();
-      // add to hashList
-      set(title, author);
-    } else if (menuCommand.equals("V")) {
-      printList();
-    } else if (menuCommand.equals("T")) {
-      System.out.println(keys());
-    } else if (menuCommand.equals("A")) {
-      System.out.println(values());
-    }
-  }
+  // // Ask User for book/author
+  // String title = getBook();
+  // String author = getAuth();
+  // // add to hashList
+  // set(title, author);
+  // } else if (menuCommand.equals("V")) {
+  // printList();
+  // } else if (menuCommand.equals("T")) {
+  // System.out.println(keys());
+  // } else if (menuCommand.equals("A")) {
+  // System.out.println(values());
+  // }
+  // }
 }

@@ -1,5 +1,5 @@
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class Main {
 
@@ -12,32 +12,32 @@ public class Main {
     Book bookList = new Book();
     Menu menuList = new Menu();
 
-    // user menu:
-    // type + to add book to list,
-    // type V to view list,
-    // type A to sort by author,
-    // type T to sort by Title
-
     String menuCommand = menuList.options();
 
-    bookList.runCommand(menuCommand);
+    // bookList.runCommand(menuCommand);
 
-    // if (menuCommand == "+") {
-    // // check:
-    // System.out.println("In the IF statement!");
+    if (menuCommand.equals("+")) {
+      // Ask User for book/author
+      String title = bookList.getBook();
+      String author = bookList.getAuth();
+      // add to hashList
+      bookList.set(title, author);
+    } else if (menuCommand.equals("V")) {
+      bookList.printList();
+    } else if (menuCommand.equals("T")) {
+      System.out.println(bookList.keys());
+    } else if (menuCommand.equals("A")) {
+      System.out.println(bookList.values());
+    }
 
-    // // Ask User for book/author
+    // ******** This code block successfully asks for book title and author, saves
+    // it to a list, then displays the list. But only runs once. *********
     // String title = bookList.getBook();
     // String author = bookList.getAuth();
-    // // add to hashList
     // bookList.set(title, author);
-    // } else if (menuCommand == "V") {
     // bookList.printList();
-    // } else if (menuCommand == "T") {
-    // System.out.println(bookList.keys());
-    // } else if (menuCommand == "A") {
-    // System.out.println(bookList.values());
-    // }
+
+    // ***************//
 
     // // add books to list
     // bookList.set("Harry Potter", "J.K. Rowling");
