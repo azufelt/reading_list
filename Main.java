@@ -19,25 +19,27 @@ public class Main {
     // type T to sort by Title
 
     String menuCommand = menuList.options();
-    // bookList.runCommand(menuCommand);
+
     System.out.println(menuCommand); // **Prints the command the user entered. */
 
-    if (menuCommand == "+") {
-      // check:
-      System.out.println("In the IF statement!");
+    bookList.runCommand(menuCommand);
 
-      // Ask User for book/author
-      String title = bookList.getBook();
-      String author = bookList.getAuth();
-      // add to hashList
-      bookList.set(title, author);
-    } else if (menuCommand == "V") {
-      bookList.printList();
-    } else if (menuCommand == "T") {
-      System.out.println(bookList.keys());
-    } else if (menuCommand == "A") {
-      System.out.println(bookList.values());
-    }
+    // if (menuCommand == "+") {
+    // // check:
+    // System.out.println("In the IF statement!");
+
+    // // Ask User for book/author
+    // String title = bookList.getBook();
+    // String author = bookList.getAuth();
+    // // add to hashList
+    // bookList.set(title, author);
+    // } else if (menuCommand == "V") {
+    // bookList.printList();
+    // } else if (menuCommand == "T") {
+    // System.out.println(bookList.keys());
+    // } else if (menuCommand == "A") {
+    // System.out.println(bookList.values());
+    // }
 
     // // add books to list
     // bookList.set("Harry Potter", "J.K. Rowling");

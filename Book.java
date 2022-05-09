@@ -125,4 +125,22 @@ public class Book {
     return allValues;
   }
 
+  public void runCommand(String menuCommand) {
+    if (menuCommand == "+") {
+      // check:
+      System.out.println("In the IF statement!");
+
+      // Ask User for book/author
+      String title = getBook();
+      String author = getAuth();
+      // add to hashList
+      set(title, author);
+    } else if (menuCommand == "V") {
+      printList();
+    } else if (menuCommand == "T") {
+      System.out.println(keys());
+    } else if (menuCommand == "A") {
+      System.out.println(values());
+    }
+  }
 }
